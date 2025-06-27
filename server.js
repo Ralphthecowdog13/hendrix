@@ -30,3 +30,10 @@ mongoose.connect(process.env.MONGODB_URI, {
 }).catch((err) => {
   console.error('❌ MongoDB connection error:', err);
 });
+const express = require('express');
+const cors = require('cors');
+const app = express();
+
+app.use(cors()); // allow all origins - good for dev, restrict later if you want
+
+// Your other middleware/routes
